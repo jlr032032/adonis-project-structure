@@ -11,7 +11,8 @@
 |
 */
 const providers = [
-  '@adonisjs/framework/providers/AppProvider'
+  '@adonisjs/framework/providers/AppProvider',
+  '@adonisjs/bodyparser/providers/BodyParserProvider'
 ]
 
 /*

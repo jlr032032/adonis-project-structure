@@ -17,6 +17,7 @@ const providers = [
   '@adonisjs/bodyparser/providers/BodyParserProvider',
   '@adonisjs/antl/providers/AntlProvider',
   path.join(__dirname, '..', 'providers', 'Logger/Provider'),
+  path.join(__dirname, '..', 'providers', 'Cryptology/Provider')
 ]
 
 /*

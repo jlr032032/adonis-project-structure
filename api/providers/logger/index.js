@@ -4,7 +4,7 @@ class Logger {
 
   constructor(DefaultLogger){
     this.Logger = DefaultLogger
-    this.debug('Initialized provider: Logger')
+    this.debug('Initialized service provider: Logger')
   }
 
   debug(msg){

@@ -3,10 +3,8 @@
 class Cryptology {
 
   constructor(CryptoJS){
-    Logger.info('Initialized provider: Cryptology')
-
+    Logger.info('Initialized service provider: Cryptology')
     this.CryptoJS = CryptoJS
-
     this.CryptoJSAesJson = {
       stringify: (cipherParams) => {
         let j = {res: cipherParams.ciphertext.toString(CryptoJS.enc.Base64)};

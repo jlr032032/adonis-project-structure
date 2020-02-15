@@ -17,12 +17,19 @@ class Decryption {
    * @param {Function} next
    */
   async handle ({ request }, next) {
-    request.body = Cryptology.decrypt(request.body.dataRequest)
+    if (request.hasBody())
+      request.body = Cryptology.decrypt(request.body.dataRequest)
+    this.logMessage(request.method(), request.body)
     await next()
   }
+
+  logMessage (method, body) {
+    let logMessage = `${method.toUpperCase()} request received.`
+    if (body)
+      logMessage += ` Body: ${JSON.stringify(body)}`
+    Logger.notice(logMessage)
+  }
+
 }
 
 module.exports = Decryption
-
-
-
